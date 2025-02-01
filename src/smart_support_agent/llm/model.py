@@ -75,13 +75,12 @@ def get_llm(
     pipe_kwargs = {
         "model": model,
         "tokenizer": tokenizer,
-        "max_new_tokens": MAX_OUTPUT_LENGTH,  # Limit new tokens generated
+        "max_new_tokens": MAX_OUTPUT_LENGTH,  # Control output length
         "do_sample": True,  # Enable sampling
         "temperature": 0.7,  # Control randomness
         "top_p": 0.95,      # Nucleus sampling
         "repetition_penalty": 1.15,
         "truncation": True,  # Enable truncation
-        "max_length": TOTAL_MAX_LENGTH,  # Total sequence length limit
         "return_full_text": False,  # Only return generated text
     }
     

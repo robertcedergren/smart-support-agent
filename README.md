@@ -95,11 +95,11 @@ Support Team
 
 ### Business Impact
 
-- **Efficiency**: 70% reduction in initial response time
-- **Consistency**: 90% accuracy in ticket categorization
-- **Scalability**: Handle 3x more tickets without additional staffing
+- **Efficiency**: Reduction in initial response time
+- **Consistency**: Higher accuracy in ticket categorization
+- **Scalability**: Handle more tickets without additional staffing
 - **Customer Satisfaction**: Immediate acknowledgment and structured responses
-- **Cost Reduction**: 40% decrease in ticket handling time
+- **Cost Reduction**: Decrease in ticket handling time
 - **24/7 Coverage**: Continuous support availability
 
 ## Overview

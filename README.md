@@ -231,12 +231,20 @@ streamlit run ./src/smart_support_agent/ui/app.py
 ### Model Experiments
 - [ ] Test Llama 3.1 when available
 - [ ] Compare performance with current model
+- [ ] Implement model quantization for faster responses
+- [ ] Add model caching for faster responses
 - [ ] Optimize token length settings
 
 ### Prompt Engineering
 - [ ] Test system prompts for better role adherence
 - [ ] Add few-shot examples to improve accuracy
 - [ ] Experiment with temperature and sampling settings
+
+### Development
+- [ ] Run pytests
+- [ ] Run formatting checks
+- [ ] Include git actions (build, test, lint)
+- [ ] Include dockerfile for deployment
 
 ## Customization
 

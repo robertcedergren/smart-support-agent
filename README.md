@@ -226,6 +226,18 @@ streamlit run ./src/smart_support_agent/ui/app.py
 - Check linting: `ruff check .`
 - Sort imports: `isort .`
 
+## TODO
+
+### Model Experiments
+- [ ] Test Llama 3.1 when available
+- [ ] Compare performance with current model
+- [ ] Optimize token length settings
+
+### Prompt Engineering
+- [ ] Test system prompts for better role adherence
+- [ ] Add few-shot examples to improve accuracy
+- [ ] Experiment with temperature and sampling settings
+
 ## Customization
 
 ### Model Selection

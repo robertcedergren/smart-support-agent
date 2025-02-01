@@ -19,6 +19,8 @@ dependencies = [
     "sentence-transformers>=2.2.2",
     "accelerate>=0.26.0",
     "loguru>=0.7.2",
+    "bitsandbytes>=0.41.0",  # For 8-bit quantization
+    "safetensors>=0.4.0",    # For efficient model loading
 ]
 
 [project.optional-dependencies]

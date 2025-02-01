@@ -6,13 +6,13 @@ import torch
 from langchain_huggingface import HuggingFacePipeline
 from transformers import AutoModelForCausalLM, AutoTokenizer, Pipeline, pipeline
 
-# Default model for local usage - using a smaller, more compatible model
-DEFAULT_MODEL = "facebook/opt-125m"
+# Default model for local usage - using Llama 3 small model
+DEFAULT_MODEL = "meta-llama/Llama-3-7b"  # Update this with actual Llama 3 model name when released
 
-# Token limits - OPT-125m has a context window of 2048 tokens
-MAX_INPUT_LENGTH = 512  # Reserve space for input
-MAX_OUTPUT_LENGTH = 256  # Limit response length
-TOTAL_MAX_LENGTH = 1024  # Keep well under model's limit for safety
+# Token limits - Llama models typically have 4096 context window
+MAX_INPUT_LENGTH = 1024  # Reserve space for input
+MAX_OUTPUT_LENGTH = 512  # Limit response length
+TOTAL_MAX_LENGTH = 2048  # Keep well under model's limit for safety
 
 def get_device():
     """Determine the best available device."""
@@ -31,7 +31,7 @@ def get_llm(
     Initialize and return a LangChain-compatible LLM.
     
     Args:
-        model_name: Name of the model to use (default: opt-125m)
+        model_name: Name of the model to use (default: Llama-3-7b)
         device: Device to run the model on ('cpu', 'cuda', or 'mps'). If None, best device is auto-detected
         max_length: Maximum length of generated text
     
@@ -54,6 +54,7 @@ def get_llm(
     # Configure model loading based on device
     model_kwargs = {
         "trust_remote_code": True,
+        "use_auth_token": True,  # Required for Llama models
     }
     
     if device == "cuda":

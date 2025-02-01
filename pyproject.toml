@@ -1,0 +1,55 @@
+[project]
+name = "smart-support-agent"
+version = "0.1.0"
+description = "AI-powered customer support system using open-source LLMs"
+authors = []
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "transformers>=4.36.0",
+    "torch>=2.1.0",
+    "pydantic>=2.4.2",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.28.0",
+    "langchain>=0.1.0",
+    "langchain-community>=0.0.10",
+    "langchain-core>=0.1.0",
+    "langchain-huggingface>=0.0.6",
+    "sentence-transformers>=2.2.2",
+    "accelerate>=0.26.0",
+    "loguru>=0.7.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.3",
+    "pytest-asyncio>=0.21.1",
+    "black>=23.11.0",
+    "ruff>=0.1.6",
+    "isort>=5.12.0",
+    "pre-commit>=3.5.0",
+    "httpx>=0.25.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v -s --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
